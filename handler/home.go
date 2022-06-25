@@ -7,7 +7,7 @@ import (
 )
 
 func Home(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
+	c.HTML(http.StatusOK, "index.gohtml", gin.H{
 		"page": "home",
 	})
 }

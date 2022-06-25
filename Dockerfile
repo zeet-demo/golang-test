@@ -10,6 +10,7 @@ RUN go mod download
 COPY . .
 
 ENV PORT 8080
+ENV GIN_MODE=release
 EXPOSE 8080
 
 RUN go build

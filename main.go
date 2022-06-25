@@ -24,6 +24,5 @@ func main() {
 	func() {
 		log.Println("Server started")
 		r.Run(":" + os.Getenv("PORT"))
-		// r.Run (":8080")
 	}()
 }

@@ -13,10 +13,10 @@ func main() {
 	r.Use(gin.Recovery())
 
 	r.GET("/", handler.Home)
-	r.GET("/hello", handler.Hello)
+	r.GET("/hello/*name", handler.Hello)
 
 	func() {
 		log.Println("Server started")
-		go r.Run("127.0.0.1:8000")
+		r.Run("127.0.0.1:8080")
 	}()
 }
